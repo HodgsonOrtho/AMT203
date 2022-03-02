@@ -5,15 +5,10 @@
         Research and Development Co-Op
   For: Hodgson Orthopedic Group
   
-  A sketch to intake the data from a load cell via an HX711 ADC and 
-  CUI AMT203 rotary encoder via its onboard SPI controller.
+  A sketch to intake the data from a rotary encoder via its onboard SPI controller.
   
   Intended Functionality
-    Signal "simultaneous" data capture from the load cell and encoder
-    Record the time, load cell output, and encoder output
-    Package the data into efficient packets to transfer via serial out (ttyUSB)
-    Write to serial the data package
-    Repeat until test complete
+    Simplify the use of an SPI-controlled absolute rotary encoder to simple functional calls.
 */
 
 // SPI Library
