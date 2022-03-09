@@ -6,7 +6,7 @@
 
 == Project: CUI AMT203 Arduino Library
 
-A custom library to add simple functional calls for an AMT203 absolute rotary encoder manufactured by CUI Inc. 
+A custom library to add simple functional calls for an AMT203 absolute rotary encoder manufactured by CUI Inc.
 
 This library was built for use on the Arduino Uno (ATmega328P) development board which will act as a prototyping
 controller for the internal testing of various data acquisition projects.
@@ -16,29 +16,29 @@ controller for the internal testing of various data acquisition projects.
 1. Place the contained files within your working directory (where the .ino file is)
 
 2. Add an inclusion header to your .ino file
-  >> #include "AMT203.h"
+
+  #include "AMT203.h"
 
 3. Initialize an AMT203 object with SPI communications arguments
-  >> AMT203 encoder(rotaryEncoderSCK, rotaryEncoderMOSI, rotaryEncoderMISO, rotaryEncoderCS, baudRate);
+
+  AMT203 encoder(rotaryEncoderSCK, rotaryEncoderMOSI, rotaryEncoderMISO, rotaryEncoderCS, baudRate);
 
 == Step 2: Using the library
 
 Call the newly defined object with the following functions as needed:
   (Copied from the header file, "AMT203.h")
 
-  >> void open();
-      Opens an SPI communications stream between the encoder and the Arduino
+  void open();
+      >> Opens an SPI communications stream between the encoder and the Arduino
 
-  >> bool setZero();
-      Sets the current position of the encoder to "0" and future measurements
-      will be an offset of this value
-    
-  >> uint8_t command(uint8_t amtCommand);
-      Sends a command of type 8-bit unsigned integer if you want to send a specific
-      command directly to the encoder (unnecessary for normal operations)
+  bool setZero();
+      >> Sets the current position of the encoder to "0" and future measurements will be an offset of this value
 
-  >> uint16_t getPosition();
-      Returns the current position as the exact unsigned integer reported by the encoder
+  uint8_t command(uint8_t amtCommand);
+      >> Sends a command of type 8-bit unsigned integer if you want to send a specific command directly to the encoder (unnecessary for normal operations)
+
+  uint16_t getPosition();
+      >> Returns the current position as the exact unsigned integer reported by the encoder
 
 
 === Folder structure
